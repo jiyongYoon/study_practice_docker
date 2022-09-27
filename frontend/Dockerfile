@@ -13,4 +13,4 @@ CMD ["http-server", "-p", "8080", "./public"]
 # docker build -t {이미지명} .
 
 # 컨테이너 생성 & 실행 명령어
-# docker run --name {컨테이너명} -v $(pwd):/home/node/app -p 8080:8080 {이미지명}
+# docker run --name {컨테이너명} -v "$(pwd):/home/node/app" -p 8080:8080 {이미지명}

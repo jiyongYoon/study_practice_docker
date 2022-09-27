@@ -13,4 +13,4 @@ CMD ["python3", "backend.py"]
 # docker build -t {이미지명} .
 
 # 컨테이너 생성 & 실행 명령어
-# docker run --name {컨테이너명} -v $(pwd):/usr/src/app -p 5000:5000 {이미지명}
+# docker run --name {컨테이너명} -v "$(pwd):/usr/src/app" -p 5000:5000 {이미지명}

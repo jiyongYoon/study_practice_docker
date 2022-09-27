@@ -11,6 +11,9 @@ ENV MYSQL_DATABASE visitlog
 # 도커환경에서 컨테이너 생성시 스크립트를 실행하는 폴더로
 # 미리 작성된 스크립트들을 이동
 COPY ./scripts/ /docker-entrypoint-initdb.d/
+# COPY가 -v 와 다른점은, -v 는 공유하는 것인데,
+# COPY는 컨테이너가 실행될 때 이미지에 미리 복사해두는 것.
+# 이 스크립트 파일은 초기화에 필요하기 때문에 COPY를 해야 맞음.
 
 # 이미지 빌드 명령어 (현 파일과 같은 디렉토리에서)
 # docker build -t {이미지명} .
